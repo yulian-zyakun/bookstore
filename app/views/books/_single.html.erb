@@ -1,0 +1,11 @@
+
+<div class="card">
+  <div class="card-block">
+    <%= image_tag book.image, class: "card-img-top", size: "200x300" %>
+    <h4 class="card-title"><%= book.name %></h4>
+    <p class="card-text">Price: $<%= book.price %></p>
+    <p class="card-text"><%= book.category.name %></p>
+    <p class="card-text"><%= book.description %></p>
+    <%= link_to 'Back', book_show_path(book), class: "btn btn-primary" %>
+  </div>
+</div>

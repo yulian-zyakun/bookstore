@@ -1,8 +1,9 @@
-<div class="book">
-  <h4><%= book.name %></h4>
-  <p>Price: <%= book.price %></p>
-  <p><%= image_tag(book.image, size:"200x300") %></p>
-  <p>Description: <%= book.description %></p>
-  <p>Category: <%= book.category.name %></p>
-  <%= link_to 'Show', book_show_path(book) %>
+
+<div class="card">
+  <div class="card-block">
+    <%= image_tag book.image, class: "card-img-top", size: "200x300" %>
+    <h4 class="card-title"><%= book.name %></h4>
+    <p class="card-text">Price: <strong>$<%= book.price %></strong></p>    
+    <%= link_to 'Show', book_show_path(book), class: "btn btn-primary" %>
+  </div>
 </div>
