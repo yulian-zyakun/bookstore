@@ -5,4 +5,11 @@ class Book < ApplicationRecord
   has_many :line_items
   belongs_to :category
   has_many :orders, :through => :line_items
+
+
+
+def self.search(search)
+  where("name LIKE ?", "%#{search}%")
+end
+
 end

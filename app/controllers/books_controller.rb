@@ -1,7 +1,16 @@
 class BooksController < ApplicationController
 
+  # def index
+  #   @books = Book.page(params[:page]).per(3)
+  # end
+
   def index
-    @books = Book.page(params[:page]).per(3)
+    @books = Book.all
+    if params[:search]
+      @books = Book.search(params[:search]).order("created_at DESC").page(params[:page]).per(3)
+    else
+      @books = Book.all.order('created_at ASC').page(params[:page]).per(3)
+    end
   end
 
   def show

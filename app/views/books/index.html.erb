@@ -1,7 +1,26 @@
 <%= render partial: 'header' %>
+
+<% if @books.present? %>
 <div class="card-deck-wrapper">
   <div class="card-deck">
-      <%= render partial: 'book', collection: @books %>      
+      <%= render partial: 'book', collection: @books %>
   </div>
-  <%= paginate @books %>
+    <%= paginate @books %>
 </div>
+<% else %>
+  <p>There are matches found for <strong><%= params[:search] %></strong>.</p>
+<% end %>
+
+<!-- <div class="card-deck-wrapper">
+  <div class="card-deck">
+      <%= render partial: 'book', collection: @books %>
+  </div>
+    <%= paginate @books %>
+</div> -->
+
+
+
+<!-- <%= form_tag(home_path, :method => "get", id: "search-form", class: "form-inline float-xs-right") do %>
+<%= text_field_tag :search, params[:search], placeholder: "Search Books", class: "form-control" %>
+<%= submit_tag "Search", class: "btn btn-outline-success" %>
+<% end %> -->
