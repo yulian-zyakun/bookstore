@@ -1,9 +1,12 @@
 <%= render partial: 'header' %>
 
-
+<% if @books.present? %>
 <div class="card-deck-wrapper">
   <div class="card-deck">
       <%= render partial: 'book', collection: @books %>
   </div>
     <%= paginate @books %>
 </div>
+<% else %>
+  <p>There are matches found for <strong><%= params[:search] %></strong>.</p>
+<% end %>

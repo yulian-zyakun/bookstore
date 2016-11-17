@@ -1,10 +1,10 @@
 class BooksController < ApplicationController
 
-  # def index
-  #   @books = Book.page(params[:page]).per(3)
-  # end
-
   def index
+    @books = Book.page(params[:page]).per(3)
+  end
+
+  def search
     @books = Book.all
     if params[:search]
       @books = Book.search(params[:search]).order("created_at DESC").page(params[:page]).per(3)
@@ -16,7 +16,5 @@ class BooksController < ApplicationController
   def show
     @book = Book.find(params[:id])
   end
-
-
 
 end
