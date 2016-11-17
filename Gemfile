@@ -22,12 +22,17 @@ gem 'jquery-rails'
 gem 'turbolinks', '~> 5'
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
 gem 'jbuilder', '~> 2.5'
+#
+#Added section for the project
 # Active Admin
 gem 'activeadmin', github: 'activeadmin'
 gem 'inherited_resources', github: 'activeadmin/inherited_resources'
 gem 'devise'
-
+#Bootstrap
 gem 'bootstrap', '~> 4.0.0.alpha5'
+# Pagination
+gem 'kaminari'
+
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 3.0'
