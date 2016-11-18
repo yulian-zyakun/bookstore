@@ -6,6 +6,7 @@ class BooksController < ApplicationController
   end
 
   def search
+    @categories = Category.all
     @books = Book.all
     if params[:search]
       @books = Book.search(params[:search]).order("created_at DESC").page(params[:page]).per(3)
@@ -15,13 +16,14 @@ class BooksController < ApplicationController
   end
 
   def show
+    @categories = Category.all
     @book = Book.find(params[:id])
   end
 
   def category
-    @category = Category.where("name LIKE ?", "Philosophy").first
+    @categories = Category.all
+    @category = Category.find(params[:id])
     @books = Book.where("category_id = ?", @category.id).page(params[:page]).per(3)
-    #@books = Book.joins(:categories).where(categories: {name: 'Philosophy'}).page(params[:page]).per(3)
   end
 
 end

@@ -12,12 +12,8 @@
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
-        <a class="dropdown-item" href="#">Science Fiction</a>
-        <a class="dropdown-item" href="#">Detective</a>
-        <a class="dropdown-item" href="#">Philosophy</a>
-        <%= link_to 'Test', book_category_path, class: "dropdown-item" %>
         <% @categories.each do |cat| %>
-          <%= link_to "#{cat.name}", book_category_path, class: "dropdown-item" %>
+          <%= link_to "#{cat.name}", book_category_path(:id => cat.id), class: "dropdown-item" %>
         <%end%>
       </div>
     </li>
