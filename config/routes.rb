@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   get 'books' => 'books#index', as: 'home'
   get 'show/:id' => 'books#show', as: 'book_show'
   get 'search' => 'books#search', as: 'book_search'
+  get 'category' => 'books#category', as: 'book_category'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)

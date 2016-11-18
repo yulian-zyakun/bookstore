@@ -1,0 +1,9 @@
+<%= render partial: 'header' %>
+
+
+<div class="card-deck-wrapper">
+  <div class="card-deck">
+      <%= render partial: 'book', collection: @books %>
+  </div>
+    <%= paginate @books %>
+</div>
