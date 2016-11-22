@@ -23,6 +23,14 @@ class BooksController < ApplicationController
     @books = Book.where("category_id = ?", @category.id).page(params[:page]).per(3)
   end
 
+  def about
+    @about = About.all.first
+  end
+
+  def contact
+    @contact = Contact.all.first
+  end
+
   private
   def load_categories
     @categories = Category.all

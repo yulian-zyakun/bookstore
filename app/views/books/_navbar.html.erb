@@ -3,12 +3,6 @@
     <li class="nav-item active">
       <%= link_to 'Home', home_path, class: "btn btn-primary", class: "nav-link" %>
     </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Orders</a>
-    </li>
-    <li class="nav-item">
-      <a class="nav-link" href="#">Contacts</a>
-    </li>
     <li class="nav-item dropdown">
       <a class="nav-link dropdown-toggle" href="#" id="supportedContentDropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Category</a>
       <div class="dropdown-menu" aria-labelledby="supportedContentDropdown">
@@ -16,6 +10,15 @@
           <%= link_to "#{cat.name}", book_category_path(:id => cat.id), class: "dropdown-item" %>
         <%end%>
       </div>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Orders</a>
+    </li>
+    <li class="nav-item">
+      <%= link_to "Contacts", contact_path, class: "nav-link" %>
+    </li>
+    <li class="nav-item">
+      <%= link_to "About", about_path, class: "nav-link" %>
     </li>
   </ul>
   <!-- <form class="form-inline float-xs-right">

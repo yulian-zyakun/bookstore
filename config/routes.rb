@@ -12,6 +12,9 @@ Rails.application.routes.draw do
   get 'customers/login' => 'customers#login', as: 'login'
   post 'customers' => 'customers#create'
 
+  get 'about' => 'books#about', as: 'about'
+  get 'contact' => 'books#contact', as: 'contact'
+
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
