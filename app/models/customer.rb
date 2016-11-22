@@ -3,4 +3,6 @@ class Customer < ApplicationRecord
   validates :email, :password, uniqueness: true
   # validates_confirmation_of :password
   has_many :orders
+
+
 end

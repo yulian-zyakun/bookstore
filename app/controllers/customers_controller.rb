@@ -20,10 +20,7 @@ class CustomersController < ApplicationController
       render :new
     end
   end
-
-  def login
-  end
-
+  
   private
 
   def customer_params

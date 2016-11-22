@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  get 'sessions/new'
+
   root to: 'books#index'
 
   get 'books' => 'books#index', as: 'home'
@@ -9,11 +11,14 @@ Rails.application.routes.draw do
 
   get 'customers/show/:id' => 'customers#show', as: 'show_customer'
   get 'customers/new' => 'customers#new', as: 'new_customer'
-  get 'customers/login' => 'customers#login', as: 'login'
   post 'customers' => 'customers#create'
 
   get 'about' => 'books#about', as: 'about'
   get 'contact' => 'books#contact', as: 'contact'
+
+  get 'login' => 'sessions#new'
+  post 'login' => 'sessions#create'
+  get 'logout' => 'sessions#destroy'
 
   devise_for :admin_users, ActiveAdmin::Devise.config
   ActiveAdmin.routes(self)
