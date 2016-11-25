@@ -10,11 +10,11 @@ class Order < ApplicationRecord
   before_save :update_subtotal
 
   def subtotal
-    line_items.collect { |li| li.valid? ? (li.quantity * li.unitprice) : 0 }.sum
+    line_items.collect { |li| li.valid? ? (li.quantity * li.unit_price) : 0 }.sum
   end
 private
   def set_order_status
-    self.order_status_id = 1
+    self.status = OrderStatus.find(1).name
   end
 
   def update_subtotal
