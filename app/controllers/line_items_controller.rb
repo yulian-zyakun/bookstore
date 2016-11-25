@@ -18,6 +18,7 @@ class LineItemsController < ApplicationController
     @line_item = @order.line_items.find(params[:id])
     @line_item.destroy
     @line_items = @order.line_items
+    redirect_to cart_path
   end
 
   private
