@@ -1,23 +1,20 @@
+<p></p>
 <h4>Welcome to Your Bookstore!<h4>
-
+<nav class="nav text-xs-right">
+  <% if session[:customer_name].nil?%>
+    <%= link_to "Sign Up", new_customer_path, class: "nav-link" %>
+    <%= link_to "Login", login_path, class: "nav-link" %>
+  <%else%>
+    <%= link_to "#{session[:customer_name]}", '#', class: "nav-link" %>
+    <%= link_to "Log out", logout_path, class: "nav-link" %>
+  <%end%>
+</nav>
 
 <h1>Mr. Levinson's Bookstore</h1>
 
-
-
   <div class="card card-block text-xs-right">
-    <nav class="nav">
-      <% if session[:customer_name].nil?%>
-        <%= link_to "Sign Up", new_customer_path, class: "nav-link" %>
-        <%= link_to "Login", login_path, class: "nav-link" %>
-      <%else%>
-        <%= link_to "#{session[:customer_name]}", '#', class: "nav-link" %>
-        <%= link_to "Log out", logout_path, class: "nav-link" %>
-      <%end%>
-    </nav>
     <div class="row">
       <div class="col-sm-4">
-
       </div>
        <div class="col-sm-4">
         <h5>Your favorite books at one place :-)</h5>
