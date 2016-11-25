@@ -7,5 +7,21 @@
     <p class="card-text">Category: <strong><%= @book.category.name %></strong></p>
     <p class="card-text"><%= @book.description %></p>
     <%= link_to 'Back', home_path, class: "btn btn-primary" %>
+
+
+    <div class="col-xs-4">
+      <%= form_for @line_item, remote: true do |f| %>
+        <div class="input-group">
+          <%= f.number_field :quantity, value: 1, class: "form-control", min: 1 %>
+          <div class="input-group-btn">
+            <%= f.hidden_field :book_id, value: @book.id %>
+            <%= f.hidden_field :order_id, value: session[:order_id] %>
+            <%= f.hidden_field :price, value: @book.price %>
+            <%= f.submit "Add to Cart", class: "btn btn-primary" %>
+          </div>
+        </div>
+      <% end %>
+    </div>
+
   </div>
 </div>

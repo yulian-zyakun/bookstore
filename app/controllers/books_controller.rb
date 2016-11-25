@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :load_categories
+  before_action :load_categories, :load_line_item
 
   def index
     @books = Book.page(params[:page]).per(3)
@@ -34,6 +34,10 @@ class BooksController < ApplicationController
   private
   def load_categories
     @categories = Category.all
+  end
+
+  def load_line_item
+    @line_item = current_order.line_items.new
   end
 
 end
