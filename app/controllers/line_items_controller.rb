@@ -11,6 +11,7 @@ class LineItemsController < ApplicationController
     @line_item = @order.line_items.find(params[:id])
     @line_item.update_attributes(line_item_params)
     @line_items = @order.line_items
+    redirect_to cart_path
   end
 
   def destroy
