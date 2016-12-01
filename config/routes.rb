@@ -2,6 +2,7 @@ Rails.application.routes.draw do
 
   resource :cart, only: [:show]
   resources :line_items, only: [:create, :update, :destroy]
+  resources :charges
 
   root to: 'books#index'
 
