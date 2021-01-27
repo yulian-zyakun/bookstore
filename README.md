@@ -1,24 +1,36 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This is my project completed during a full-stack web-development course at Red River Collage, Winnipeg, MB. The project is an online store that sells used books. It was developed using Ruby on Rails framework.
 
-Things you may want to cover:
+Technologies:
 
-* Ruby version
+- Ruby 2.3.1
 
-* System dependencies
+- Rails 5.0
 
-* Configuration
+- Bootsrtap 4
 
-* Database creation
+- SQLite 3
 
-* Database initialization
+- Dependencies:
+  activeadmin!
+  bootstrap (~> 4.0.0.alpha5)
+  byebug
+  coffee-rails (~> 4.2)
+  devise
+  inherited_resources!
+  jbuilder (~> 2.5)
+  jquery-rails
+  kaminari
+  pg
+  puma (~> 3.0)
+  rails (~> 5.0.0, >= 5.0.0.1)
+  sass-rails (~> 5.0)
+  sqlite3
+  stripe
+  turbolinks (~> 5)
+  tzinfo-data
+  uglifier (>= 1.3.0)
+  web-console
 
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Bundled with 1.13.6
