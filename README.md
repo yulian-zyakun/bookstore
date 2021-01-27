@@ -13,24 +13,24 @@ Technologies:
 - SQLite 3
 
 - Dependencies:
-  activeadmin!
-  bootstrap (~> 4.0.0.alpha5)
-  byebug
-  coffee-rails (~> 4.2)
-  devise
-  inherited_resources!
-  jbuilder (~> 2.5)
-  jquery-rails
-  kaminari
-  pg
-  puma (~> 3.0)
-  rails (~> 5.0.0, >= 5.0.0.1)
-  sass-rails (~> 5.0)
-  sqlite3
-  stripe
-  turbolinks (~> 5)
-  tzinfo-data
-  uglifier (>= 1.3.0)
-  web-console
+
+  - activeadmin!
+  - bootstrap > 4.0.0.
+  - byebug
+  - coffee-rails > 4.2
+  - devise
+  - jbuilder > 2.5
+  - jquery-rails
+  - kaminari
+  - pg
+  - puma > 3.0
+  - rails > 5.0.0
+  - sass-rails > 5.0
+  - sqlite3
+  - stripe
+  - turbolinks > 5
+  - tzinfo-data
+  - uglifier >= 1.3.0
+  - web-console
 
 - Bundled with 1.13.6
